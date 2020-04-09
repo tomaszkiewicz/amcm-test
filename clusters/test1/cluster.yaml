@@ -1,7 +1,7 @@
 cluster:
   name: test1
   server: https://test1.example.luktom.net
-  repoURL: git@gitlab.com:luktom/k8s.git
+  repoURL: https://github.com/tomaszkiewicz/amcm-test.git
 
 helmApplications:
 - addon: kube2iam
