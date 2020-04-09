@@ -1,0 +1,28 @@
+repoURL: https://github.com/helm/charts
+path: stable/kube2iam
+namespace: kube-system
+values:
+  extraArgs:
+    auto-discover-base-arn: ""
+    default-role: k8s-default-pod
+
+  host:
+    iptables: true
+    interface: cali+
+
+  rbac:
+    create: true
+
+  image:
+    tag: 0.10.8
+
+  resources:
+    limits:
+      cpu: 4m
+      memory: 16Mi
+    requests:
+      cpu: 4m
+      memory: 16Mi
+
+  updateStrategy: RollingUpdate
+  priorityClassName: "system-node-critical"

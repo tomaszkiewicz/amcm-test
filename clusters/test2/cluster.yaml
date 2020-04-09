@@ -1,0 +1,3 @@
+cluster:
+  name: test2
+  server: https://test2.example.luktom.net

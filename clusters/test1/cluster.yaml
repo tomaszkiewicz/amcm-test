@@ -1,0 +1,16 @@
+cluster:
+  name: test1
+  server: https://test1.example.luktom.net
+  repoURL: git@gitlab.com:luktom/k8s.git
+
+helmApplications:
+- addon: kube2iam
+
+kustomizeApplications:
+- name: coredns-eks
+  path: addons/coredns-eks
+  cascadeDelete: true
+
+- name: kube-proxy-eks
+  path: addons/kube-proxy-eks
+  disableAutoSync: true
