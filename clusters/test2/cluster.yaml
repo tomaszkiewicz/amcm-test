@@ -1,3 +1,13 @@
 cluster:
   name: test2
   server: https://test2.example.luktom.net
+  projectRoles:
+  - name: ci-role
+    policies:
+    - p, proj:my-project:ci-role, applications, sync, my-project/guestbook-dev, allow
+    jwtTokens:
+    - iat: 1535390316
+
+helmApplications:
+- name: test
+  path: helm/test
