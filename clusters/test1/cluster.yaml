@@ -5,6 +5,11 @@ cluster:
 
 helmApplications:
 - addon: kube2iam
+  parameters:
+    test.subtest: valueTest
+  settings:
+    test: replacement
+- addon: dex
 
 kustomizeApplications:
 - name: coredns-eks

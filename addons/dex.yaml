@@ -1,0 +1,3 @@
+repoURL: https://github.com/helm/charts
+path: stable/dex
+values:
